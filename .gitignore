@@ -1,0 +1,30 @@
+# Ignore Python bytecode files and generated folders
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.db
+*.sqlite3
+
+# Ignore virtual environments (if you are using one)
+env/
+venv/
+.venv/
+
+# Ignore editor configuration files
+.vscode/
+.idea/
+
+# Ignore log files
+*.log
+
+# Ignore temporary files
+*.swp
+*.bak
+
+# Ignore OS-specific configurations
+.DS_Store  # For macOS
+Thumbs.db  # For Windows
+
+# Ignore Dockerfile
+Dockerfile
