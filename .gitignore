@@ -28,3 +28,6 @@ Thumbs.db  # For Windows
 
 # Ignore Dockerfile
 Dockerfile
+
+# Ignore .env file containing sensitive information
+.env
