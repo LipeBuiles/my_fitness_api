@@ -1,5 +1,8 @@
 from sqlalchemy.orm import Session
+<<<<<<< HEAD
 from sqlalchemy.exc import IntegrityError
+=======
+>>>>>>> 63a296d11029cc39196a561ceab89b89fb3e93e8
 from models.type_training import TypeTraining
 
 def get_type_training(db: Session, skip: int = 0, limit: int = 10):
@@ -13,6 +16,7 @@ def create_type_training(db: Session, name: str):
     db.add(db_training)
     db.commit()
     db.refresh(db_training)
+<<<<<<< HEAD
     return db_training
 
 def update_type_training(db: Session, training_id: int, name: str):
@@ -34,3 +38,6 @@ def delete_type_training(db: Session, training_id: int):
             db.rollback()
             raise ValueError("No se puede eliminar este tipo de entrenamiento porque está siendo utilizado en registros de entrenamiento existentes")
     return None
+=======
+    return db_training
+>>>>>>> 63a296d11029cc39196a561ceab89b89fb3e93e8
