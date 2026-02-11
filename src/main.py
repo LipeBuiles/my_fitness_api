@@ -4,7 +4,8 @@ from src.api import (
     users,
     health,
     training,
-    cadence
+    cadence,
+    dream
 )
 
 app = FastAPI(title="My Fitness API")
@@ -14,6 +15,7 @@ app.include_router(users.router)
 app.include_router(health.router)
 app.include_router(training.router)
 app.include_router(cadence.router)
+app.include_router(dream.router)
 
 @app.get("/", include_in_schema=False)
 def read_root():
