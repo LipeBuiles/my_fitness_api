@@ -2,15 +2,13 @@ from sqlalchemy.orm import Session
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import defer
 from models.health import Health
+from datetime import datetime, date as date_type
 
 def get_health(db: Session, skip: int = 0, limit: int = 1000):
     return db.query(Health).offset(skip).limit(limit).all()
 
 def get_health_by_id(db: Session, health_id: int):
     return db.query(Health).filter(Health.id == health_id).first()
-
-
-from datetime import datetime, date as date_type
 
 def create_health(db: Session, date: date_type, calories: int, steps: int, distance: float, moviment: int, in_training: str, id_user_create: int):
     db_health = Health(
