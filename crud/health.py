@@ -3,7 +3,7 @@ from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import defer
 from models.health import Health
 
-def get_health(db: Session, skip: int = 0, limit: int = 10):
+def get_health(db: Session, skip: int = 0, limit: int = 1000):
     return db.query(Health).offset(skip).limit(limit).all()
 
 def get_health_by_id(db: Session, health_id: int):

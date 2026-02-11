@@ -4,7 +4,7 @@ from sqlalchemy.orm import defer
 from models.users import Users
 import bcrypt
 
-def get_user(db: Session, skip: int = 0, limit: int = 10):
+def get_user(db: Session, skip: int = 0, limit: int = 1000):
     return db.query(Users).options(defer(Users.password)).offset(skip).limit(limit).all()
 
 def get_user_by_id(db: Session, user_id: int):

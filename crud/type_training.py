@@ -2,7 +2,7 @@ from sqlalchemy.orm import Session
 from sqlalchemy.exc import IntegrityError
 from models.type_training import TypeTraining
 
-def get_type_training(db: Session, skip: int = 0, limit: int = 10):
+def get_type_training(db: Session, skip: int = 0, limit: int = 1000):
     return db.query(TypeTraining).offset(skip).limit(limit).all()
 
 def get_type_training_by_id(db: Session, training_id: int):
