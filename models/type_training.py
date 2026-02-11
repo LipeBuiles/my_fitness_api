@@ -5,4 +5,4 @@ class TypeTraining(Base):
     __tablename__ = "type_training"
 
     id = Column(Integer, primary_key=True, index=True)
-    name = Column(String, index=True)
+    name = Column(String, nullable=False)

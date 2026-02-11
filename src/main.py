@@ -1,10 +1,15 @@
 from fastapi import FastAPI
-from src.api import type_training, users
+from src.api import (
+    type_training,
+    users,
+    health
+)
 
 app = FastAPI(title="My Fitness API")
 
 app.include_router(type_training.router)
 app.include_router(users.router)
+app.include_router(health.router)
 
 @app.get("/", include_in_schema=False)
 def read_root():
