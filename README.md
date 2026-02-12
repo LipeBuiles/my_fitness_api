@@ -254,7 +254,7 @@ Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más det
 
 **Juan Felipe Builes**
 
-- GitHub: [@tuusuario](https://github.com/LipeBuile)
+- GitHub: [@LipeBuiles](https://github.com/LipeBuiles)
 
 ## 🙏 Agradecimientos
 
