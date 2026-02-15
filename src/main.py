@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from core.config import settings
 from src.api import (
     type_training,
     users,
@@ -13,7 +14,10 @@ from src.api import (
     stride_cm
 )
 
-app = FastAPI(title="My Fitness API")
+app = FastAPI(
+    title=settings.PROJECT_NAME,
+    version=settings.PROJECT_VERSION
+)
 
 app.include_router(type_training.router)
 app.include_router(users.router)
