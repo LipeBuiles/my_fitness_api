@@ -4,6 +4,7 @@ class Settings(BaseSettings):
     PROJECT_NAME: str = "My Fitness API"
     PROJECT_VERSION: str = "1.0.0"
     DATABASE_URL: str = ""
+    SENTRY_API_KEY: str = ""
 
     model_config = SettingsConfigDict(
         env_file=".env",

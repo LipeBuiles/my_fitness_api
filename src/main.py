@@ -1,3 +1,4 @@
+import sentry_sdk
 from fastapi import FastAPI
 from core.config import settings
 from src.api import (
@@ -13,6 +14,14 @@ from src.api import (
     pace_for_km,
     stride_cm
 )
+
+# Inicializar Sentry
+if settings.SENTRY_API_KEY:
+    sentry_sdk.init(
+        dsn=settings.SENTRY_API_KEY,
+        traces_sample_rate=1.0,
+        profiles_sample_rate=1.0,
+    )
 
 app = FastAPI(
     title=settings.PROJECT_NAME,
